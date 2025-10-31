@@ -16,7 +16,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.3rem;
   padding: 2rem;
   max-width: 1000px;
   min-height: 90vh;
@@ -24,39 +24,32 @@ html, body {
   opacity: 0;
   animation: fadeIn 1.2s ease-in-out forwards;
 }
-.logo {
-  width: 320px;
-  height: auto;
-}
+.logo { width: 320px; height: auto; }
+.texte { max-width: 800px; }
 .texte p {
   font-size: 1.05rem;
   font-weight: 300;
   color: #444;
   line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.domaines {
-  width: 100%;
-  margin-top: 1rem;
+  margin-bottom: 0.9rem;
 }
 .domaines-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .domaines-grid { grid-template-columns: 1fr; }
 }
 .domaine {
   background: #f9f9f9;
   border-radius: 16px;
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 0.8rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
   opacity: 0;
   transform: translateY(20px);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
   animation: fadeUp 0.8s ease-out forwards;
-}
-.domaine:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-4px);
 }
 .domaine h3 {
   font-weight: 500;
@@ -82,24 +75,25 @@ html, body {
   transition: background-color 0.3s ease, transform 0.2s ease;
   opacity: 0;
   animation: fadeZoom 1s ease-out 1.5s forwards;
-  margin-bottom: 3vh;
 }
-.btn-contact:hover {
-  background-color: #005bbb;
-  transform: scale(1.03);
+.btn-contact:hover { background-color: #005bbb; transform: scale(1.03); }
+.footer {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 2rem;
 }
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.footer a { color: #888; text-decoration: none; }
+.footer a:hover { color: #555; }
+.retour {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #888;
+  text-decoration: none;
 }
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-@keyframes fadeZoom {
-  from {opacity: 0; transform: scale(0.95);}
-  to {opacity: 1; transform: scale(1);}
-}
+.retour:hover { color: #555; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes fadeUp { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+@keyframes fadeZoom { from {opacity: 0; transform: scale(0.95);} to {opacity: 1; transform: scale(1);} }
 .delay-1 {animation-delay: 0.8s;}
 .delay-2 {animation-delay: 1s;}
 .delay-3 {animation-delay: 1.2s;}
