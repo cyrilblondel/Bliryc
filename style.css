@@ -1,0 +1,52 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, SF Pro Display, Helvetica Neue, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 700px;
+}
+.logo {
+  width: 360px;
+  height: auto;
+  animation: fadeIn 1.5s ease-in;
+}
+.texte p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+.btn-contact {
+  display: inline-block;
+  background-color: #007aff;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.8rem 2.2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-contact:hover {
+  background-color: #005bbb;
+  transform: translateY(-2px);
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
