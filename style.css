@@ -8,45 +8,98 @@ html, body {
   color: #111;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
+  overflow-y: auto;
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 2rem;
-  max-width: 700px;
+  max-width: 1000px;
+  min-height: 90vh;
+  margin-top: 3vh;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
 }
 .logo {
-  width: 360px;
+  width: 320px;
   height: auto;
-  animation: fadeIn 1.5s ease-in;
 }
 .texte p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 300;
   color: #444;
   line-height: 1.6;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
+}
+.domaines {
+  width: 100%;
+  margin-top: 1rem;
+}
+.domaines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.domaine {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.domaine:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+.domaine h3 {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.domaine p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.emoji {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
 }
 .btn-contact {
   display: inline-block;
   background-color: #007aff;
   color: #fff;
   font-weight: 500;
-  padding: 0.8rem 2.2rem;
+  padding: 0.7rem 2rem;
   border-radius: 40px;
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  animation: fadeZoom 1s ease-out 1.5s forwards;
+  margin-bottom: 3vh;
 }
 .btn-contact:hover {
   background-color: #005bbb;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+@keyframes fadeZoom {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+.delay-1 {animation-delay: 0.8s;}
+.delay-2 {animation-delay: 1s;}
+.delay-3 {animation-delay: 1.2s;}
