@@ -7,6 +7,7 @@
     <!-- Favicon SVG intégré (Lettre B dans les couleurs du site) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23635bff%22 rx=%2210%22/><text x=%2250%%22 y=%2290%%22 font-size=%2280%22 fill=%22white%22 font-family=%22Inter, sans-serif%22 text-anchor=%22middle%22>B</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement de la police Inter et application des styles de base -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
@@ -17,36 +18,75 @@
         .text-accent {
             color: #635bff;
         }
-        /* Style des titres de section mis à jour pour plus d'impact et d'espacement */
+        .btn-accent {
+            background-color: #635bff;
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background-color: #554cdb;
+            box-shadow: 0 4px 15px rgba(99, 91, 255, 0.4);
+        }
+        .bg-gradient-accent {
+            background-image: linear-gradient(to right, #635bff, #453c9e);
+        }
+        /* Style des titres de section mis à jour */
         .section-title {
-            /* text-3xl pour un impact fort, font-extrabold pour correspondre au style H1 */
-            @apply text-3xl font-extrabold text-[#1a1a2e] mb-4 mt-12; 
+            @apply text-3xl font-extrabold text-[#1a1a2e] mb-4 mt-12; 
         }
     </style>
 </head>
 <body class="antialiased">
-    <!-- Header minimal pour la cohérence -->
-    <header class="bg-white/95 backdrop-blur-sm shadow-md">
-        <nav class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
-            <!-- Logo cliquable vers la home page (pointant vers index.html) -->
-            <a href="index.html" class="flex-shrink-0 flex items-center">
-                <span class="text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
-                <span class="text-xl font-light text-gray-500">.INVEST</span>
-            </a>
-            <span class="ml-4 text-gray-400">/ Mentions Légales</span>
+
+    <!-- En-tête de navigation sticky (Structure cohérente avec index.html et a_propos.html) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo cliquable vers la home page -->
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <span class="ml-2 text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
+                    <span class="text-xl font-light text-gray-500">.INVEST</span>
+                </a>
+
+                <!-- Navigation Desktop (vide pour simplification) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Anciennement: <a href="a_propos.html" class="text-sm font-medium text-gray-700 hover:text-accent transition-colors duration-200">À Propos</a> -->
+                </div>
+
+                <!-- Bouton de contact CTA Desktop (CTA Uniformisé) -->
+                <div class="hidden md:block">
+                    <a href="mailto:bliryc@gmail.com" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white btn-accent rounded-full shadow-lg">
+                        Contactez la holding
+                        <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+
+                <!-- Bouton Menu Mobile -->
+                <button type="button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </nav>
+
+        <!-- Menu Mobile (caché par défaut) (CTA Mobile Uniformisé) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="mailto:bliryc@gmail.com" class="block px-3 py-2 rounded-md text-base font-medium text-white btn-accent text-center mt-2">Contactez la holding</a>
+            </div>
+        </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white shadow-lg rounded-lg my-12">
         <h1 class="text-4xl font-extrabold text-center text-[#1a1a2e] mb-12">Mentions Légales</h1>
 
         <!-- Éditeur du site -->
-        <h2 class="section-title">Éditeur du site</h2>
+        <h2 class="section-title border-t pt-8 border-gray-100">Éditeur du site</h2>
         <div class="space-y-1 text-gray-700 mb-10">
             <p><strong class="text-accent">Nom de la société :</strong> Bliryc Invest</p>
             <p><strong class="text-accent">Statut :</strong> Holding d’investissement de Cyril Blondel</p>
             <p><strong class="text-accent">Siège social :</strong> Paris, France</p>
-            <p><strong class="text-accent">Email :</strong> <a href="mailto:bliryc@gmail.com" class="hover:underline">bliryc@gmail.com</a></p>
+            <p><strong class="text-accent">Email :</strong> <a href="mailto:bliryc@gmail.com" class="hover:underline text-accent">bliryc@gmail.com</a></p>
         </div>
 
         <!-- Directeur de la publication -->
@@ -75,7 +115,7 @@
             Les informations diffusées sur ce site le sont à titre informatif. Bliryc Invest ne saurait être tenue responsable d’éventuelles omissions, inexactitudes ou carences dans la mise à jour.
         </p>
 
-        <!-- Lien de Retour à l'Accueil (pointant vers index.html) -->
+        <!-- Lien de Retour à l'Accueil (Utilisé comme CTA intermédiaire, puis le pied de page prend le relais) -->
         <div class="mt-12 pt-6 border-t border-gray-200 text-center">
             <a href="index.html" class="inline-flex items-center text-accent font-semibold hover:underline">
                 <svg class="w-4 h-4 mr-2 transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -83,6 +123,32 @@
             </a>
         </div>
     </main>
+
+    <!-- Pied de page (Structure cohérente avec index.html et a_propos.html) -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:justify-start items-start gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center mb-2">
+                        <span class="ml-2 text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
+                        <span class="text-xl font-light text-gray-500">.INVEST</span>
+                    </a>
+                    <p class="text-sm text-gray-500 ml-2">
+                        Holding de Cyril Blondel
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-gray-100 pt-6 text-center">
+                <p class="text-xs text-gray-400">
+                    &copy; 2025 BLIRYC INVEST. Tous droits r&eacute;serv&eacute;s. 
+                    <span class="mx-2 text-gray-300">|</span>
+                    <a href="mentions_legales.html" class="hover:text-accent font-medium">Mentions L&eacute;gales</a>
+                    <span class="mx-2 text-gray-300">|</span>
+                    Design cr&eacute;&eacute; par <a href="http://cyrilblondel.com" target="_blank" class="hover:text-accent font-medium">cyrilblondel.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
