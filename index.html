@@ -40,20 +40,21 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo cliquable vers la home page -->
-                <a href="#" class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center">
                     <span class="ml-2 text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
                     <span class="text-xl font-light text-gray-500">.INVEST</span>
                 </a>
 
-                <!-- Navigation Desktop (Vide, seulement le bouton de contact reste dans la div suivante) -->
-                <div class="hidden md:flex space-x-8">
-                    <!-- Liens de navigation retirés ici -->
+                <!-- Navigation Desktop (suppression du lien À Propos) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Navigation principale retirée pour simplification -->
                 </div>
 
                 <!-- Bouton de contact CTA Desktop -->
                 <div class="hidden md:block">
-                    <a href="mailto:bliryc@gmail.com" class="px-4 py-2 text-sm font-semibold text-white btn-accent rounded-full shadow-lg">
-                        Écrivez-moi
+                    <a href="mailto:bliryc@gmail.com" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white btn-accent rounded-full shadow-lg">
+                        Contactez la holding
+                        <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </a>
                 </div>
 
@@ -66,11 +67,10 @@
             </div>
         </nav>
 
-        <!-- Menu Mobile (caché par défaut) -->
+        <!-- Menu Mobile (caché par défaut) (mise à jour du texte du CTA mobile) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <!-- Liens de navigation retirés ici -->
-                <a href="mailto:bliryc@gmail.com" class="block px-3 py-2 rounded-md text-base font-medium text-white btn-accent text-center mt-2">Contact</a>
+                <a href="mailto:bliryc@gmail.com" class="block px-3 py-2 rounded-md text-base font-medium text-white btn-accent text-center mt-2">Contactez la holding</a>
             </div>
         </div>
     </header>
@@ -82,24 +82,27 @@
                 <p class="text-sm font-semibold text-accent uppercase tracking-widest mb-4">
                     Holding d'investissement
                 </p>
-                <!-- Titre principal: Bliryc Invest en noir -->
+                <!-- Titre principal remis en noir -->
                 <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[#1a1a2e] mb-4 leading-none">
                     Bliryc Invest
                 </h1>
-                <!-- Sous-titre rendu plus grand avec Holding en couleur -->
+                <!-- Sous-titre MODIFIÉ pour la mise en page et les couleurs -->
                 <h2 class="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-gray-800 mb-8 max-w-4xl mx-auto leading-snug">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#635bff] to-[#453c9e]">Holding</span> dont le rôle est de gérer mes différents <span class="text-accent">investissements</span>.
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#635bff] to-[#453c9e]">Holding</span> d'investissement personnel : <br class="hidden sm:block"/>
+                    <span class="text-accent">Capital-Impact & Mission Sociale</span> pour le long terme
                 </h2>
-                <!-- Texte descriptif conservé -->
+                <!-- Texte descriptif MODIFIÉ -->
                 <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-600 mb-10">
-                    Suite au décès de mes parents en 2024, j&rsquo;ai choisi de placer et d&rsquo;investir l&rsquo;argent h&eacute;rit&eacute; afin de construire un patrimoine solide. Mon objectif ultime est de pouvoir financer des projets &agrave; dimension philanthropique, comme j&rsquo;avais souhaité le faire avec la création d&rsquo;un puits au Togo grâce à la Fondation Descroix-Vernier.
+                    Suite au décès de ses parents en 2024, Cyril Blondel décide de placer et d’investir l’argent hérité afin de construire un patrimoine solide. Son objectif ultime est de pouvoir financer des projets à dimension philanthropique, comme déjà réalisé par le passé avec la création d’un puits au Togo.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="mailto:bliryc@gmail.com" class="px-8 py-3 text-lg font-semibold text-white btn-accent rounded-full shadow-2xl shadow-[#635bff]/50 hover:scale-[1.02] transform transition-all duration-300">
-                        Me Contacter
+                    <a href="mailto:bliryc@gmail.com" class="inline-flex items-center px-8 py-3 text-lg font-semibold text-white btn-accent rounded-full shadow-2xl shadow-[#635bff]/50 hover:scale-[1.02] transform transition-all duration-300">
+                        Contactez la holding
+                        <svg class="ml-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </a>
-                    <a href="#vision" class="px-8 py-3 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-full hover:bg-gray-50 transition-colors duration-300">
-                        Mes Piliers
+                    <!-- Le bouton À Propos reste inchangé -->
+                    <a href="a_propos.html" class="px-8 py-3 text-lg font-medium text-gray-700 bg-white border border-gray-300 rounded-full hover:bg-gray-50 transition-colors duration-300">
+                        À Propos
                     </a>
                 </div>
 
@@ -110,7 +113,8 @@
         <section id="vision" class="py-24 sm:py-32 bg-[#f7f7fa]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1a1a2e]">Mes piliers d'investissement</h2>
+                    <!-- TITRE MODIFIÉ -->
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1a1a2e]">Les piliers d'investissement</h2>
                     <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
                         La holding r&eacute;partit son capital entre trois grands piliers, avec des objectifs distincts mais compl&eacute;mentaires : 
                         <br class="hidden sm:block"/>
@@ -120,15 +124,18 @@
 
                 <div class="grid md:grid-cols-3 gap-8">
 
-                    <!-- Pilier 1: Immobilier -->
+                    <!-- Pilier 1: Immobilier (MODIFIÉ: pastille centrée) -->
                     <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
-                        <div class="p-3 w-12 h-12 rounded-full bg-[#635bff]/10 flex items-center justify-center mb-4">
+                        <div class="p-3 w-12 h-12 rounded-full bg-[#635bff]/10 flex items-center justify-center mb-4 mx-auto">
                             <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 12v10a1 1 0 001 1h3v-3a2 2 0 012-2h2a2 2 0 012 2v3h3a1 1 0 001-1V12" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1a1a2e] mb-3">Immobilier</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-bold text-[#1a1a2e] mb-2 text-center">Immobilier</h3>
+                        <div class="text-center mb-4">
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 inline-block">EN COURS</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-center">
                             D&eacute;veloppement d&rsquo;un patrimoine durable et responsable.
                         </p>
                         <ul class="space-y-2 text-sm text-gray-700 mt-6">
@@ -153,15 +160,18 @@
                         </ul>
                     </div>
 
-                    <!-- Pilier 2: Marchés financiers -->
+                    <!-- Pilier 2: Marchés financiers (MODIFIÉ: pastille centrée) -->
                     <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
-                        <div class="p-3 w-12 h-12 rounded-full bg-[#635bff]/10 flex items-center justify-center mb-4">
+                        <div class="p-3 w-12 h-12 rounded-full bg-[#635bff]/10 flex items-center justify-center mb-4 mx-auto">
                             <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1a1a2e] mb-3">March&eacute;s financiers</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-bold text-[#1a1a2e] mb-2 text-center">March&eacute;s financiers</h3>
+                        <div class="text-center mb-4">
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 inline-block">EN COURS</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-center">
                             Investissement raisonn&eacute; dans les march&eacute;s financiers et les actifs num&eacute;riques.
                         </p>
                         <ul class="space-y-2 text-sm text-gray-700 mt-6">
@@ -186,15 +196,18 @@
                         </ul>
                     </div>
 
-                    <!-- Pilier 3: Philanthropie & Impact social -->
+                    <!-- Pilier 3: Philanthropie & Impact social (MODIFIÉ: pastille centrée) -->
                     <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
-                        <div class="p-3 w-12 h-12 rounded-full bg-[#635bff]/10 flex items-center justify-center mb-4">
+                        <div class="p-3 w-12 h-12 rounded-full bg-[#635bff]/10 flex items-center justify-center mb-4 mx-auto">
                             <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1a1a2e] mb-3">Philanthropie & Impact social</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-bold text-[#1a1a2e] mb-2 text-center">Philanthropie & Impact social</h3>
+                        <div class="text-center mb-4">
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 inline-block">À VENIR</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-center">
                             Soutien &agrave; des initiatives humanitaires et &eacute;ducatives &agrave; long terme.
                         </p>
                         <ul class="space-y-2 text-sm text-gray-700 mt-6">
@@ -228,7 +241,7 @@
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1a1a2e] mb-4">Une ambition philanthropique</h2>
                 
                 <!-- Texte combiné avec le sous-titre et le texte d'objectif -->
-                <p class="mt-4 text-xl text-gray-600 max-w-4xl mx-auto mb-16">
+                <p class="mt-4 max-w-4xl mx-auto text-xl text-gray-600 mb-16">
                     Une partie de la performance a pour but de financer des initiatives sociales &agrave; impact durable. L&rsquo;objectif est de contribuer utilement en soutenant des associations ou projets dont l&rsquo;impact est concret, tra&ccedil;able et align&eacute; avec mes valeurs.
                 </p>
 
@@ -281,8 +294,9 @@
                 <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto mb-10">
                     La holding peut &eacute;tudier des opportunit&eacute;s coh&eacute;rentes avec sa strat&eacute;gie.
                 </p>
+                <!-- CTA mis à jour : texte et classe -->
                 <a href="mailto:bliryc@gmail.com" class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-semibold rounded-full text-white btn-accent shadow-2xl shadow-[#635bff]/50 hover:scale-[1.05] transform transition-all duration-300">
-                    Contacter la holding
+                    Contactez la holding
                     <svg class="ml-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>
             </div>
@@ -294,7 +308,7 @@
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:justify-start items-start gap-8">
                 <div>
-                    <a href="#" class="flex items-center mb-2">
+                    <a href="index.html" class="flex items-center mb-2">
                         <span class="ml-2 text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
                         <span class="text-xl font-light text-gray-500">.INVEST</span>
                     </a>
@@ -302,6 +316,7 @@
                         Holding de Cyril Blondel
                     </p>
                 </div>
+                <!-- Section Liens de Navigation dans le Footer (SUPPRIMÉE) -->
             </div>
 
             <div class="mt-8 border-t border-gray-100 pt-6 text-center">
