@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Bliryc Invest</title>
+    <!-- Favicon SVG intégré (Lettre B dans les couleurs du site) --><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23635bff%22 rx=%2210%22/><text x=%2250%%22 y=%2290%%22 font-size=%2280%22 fill=%22white%22 font-family=%22Inter, sans-serif%22 text-anchor=%22middle%22>B</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7fa;
+            color: #1a1a2e;
+        }
+        .text-accent {
+            color: #635bff;
+        }
+        .btn-accent {
+            background-color: #635bff;
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background-color: #554cdb;
+            box-shadow: 0 4px 15px rgba(99, 91, 255, 0.4);
+        }
+        .bg-gradient-accent {
+            background-image: linear-gradient(to right, #635bff, #453c9e);
+        }
+        .section-title {
+            @apply text-3xl font-extrabold text-[#1a1a2e] mb-6 mt-16;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- En-tête de navigation sticky (MAJ avec le CTA et le menu mobile) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo cliquable vers la home page -->
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <span class="ml-2 text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
+                    <span class="text-xl font-light text-gray-500">.INVEST</span>
+                </a>
+
+                <!-- Navigation Desktop (vide pour simplification) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Navigation principale retirée pour simplification -->
+                </div>
+
+                <!-- Bouton de contact CTA Desktop (CTA Uniformisé) -->
+                <div class="hidden md:block">
+                    <a href="mailto:bliryc@gmail.com" class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white btn-accent rounded-full shadow-lg">
+                        Contactez la holding
+                        <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+
+                <!-- Bouton Menu Mobile -->
+                <button type="button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile (caché par défaut) (CTA Mobile Uniformisé) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="mailto:bliryc@gmail.com" class="block px-3 py-2 rounded-md text-base font-medium text-white btn-accent text-center mt-2">Contactez la holding</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white shadow-lg rounded-lg my-12">
+        <!-- Titre principal: L'histoire en noir, Bliryc Invest en dégradé -->
+        <h1 class="text-5xl font-extrabold text-center text-[#1a1a2e] mb-4">
+            L'histoire de 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#635bff] to-[#453c9e]">
+                Bliryc Invest
+            </span>
+        </h1>
+        <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Gérer un héritage pour bâtir un avenir tourné vers l'impact social et la création de valeur durable.
+        </p>
+
+        <!-- Section 1: L'Origine et la Mission --><div class="mt-10 border-t pt-8 border-gray-100">
+            <h2 class="section-title">De l'héritage à l'investissement responsable</h2>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+                Bliryc Invest est né d'une décision personnelle prise par Cyril Blondel suite au décès de ses parents en 2024. Plutôt que de conserver passivement le capital hérité, l'objectif a été de structurer ces fonds au sein d'une holding d'investissement dédiée à la construction d'un patrimoine solide et à la génération de revenus.
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed font-semibold">
+                La mission principale est double : assurer la pérennité financière du capital et, à terme, l'utiliser comme un futur levier de financement pour des causes philanthropiques ciblées.
+            </p>
+        </div>
+        
+        <!-- Section 2: Cyril Blondel (Focus) - MODIFIÉE --><div class="mt-10 border-t pt-8 border-gray-100">
+            <!-- TITRE ET IMAGE SUPPRIMÉS -->
+            
+            <div class="grid grid-cols-1 gap-8 items-start">
+                
+                <!-- Le bloc de citation est maintenant la seule entrée -->
+                <div>
+                    <!-- Citation --><div class="bg-[#f7f7fa] p-6 rounded-xl border border-gray-200 mb-6">
+                        <p class="text-gray-700 italic leading-relaxed">
+                            « L'investissement n'est pas une fin en soi, mais un outil puissant pour transformer les ressources en opportunités. Ma volonté est que cet héritage familial ne serve pas seulement à bâtir un patrimoine personnel, mais qu'il ait aussi un impact positif et mesurable sur des projets qui me tiennent à cœur, notamment l'accès à l'eau potable. »
+                        </p>
+                        <p class="mt-4 text-sm font-medium text-right text-accent">
+                            — Cyril Blondel
+                        </p>
+                    </div>
+                    <!-- Texte descriptif --><p class="text-gray-700 leading-relaxed">
+                        Cyril Blondel supervise personnellement la stratégie d'investissement, veillant à ce que chaque pilier (Immobilier, Marchés Financiers) soit géré avec rigueur, diversification, et un horizon long terme, dans le but de générer les fonds nécessaires aux objectifs philanthropiques futurs. La prise de décision est guidée par une approche prudente et l'alignement éthique.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Section 3: L'Engagement Philanthropique (Titre Vision à Impact Durable supprimé) --><div class="mt-10 border-t pt-8 border-gray-100">
+            <!-- Suppression du titre Vision à Impact Durable -->
+            <div class="grid md:grid-cols-2 gap-8 mt-6">
+                <div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Le Projet initial : Le Puits au Togo (inspiration)</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        L'inspiration pour l'impact provient du souhait initial de financer, via la Fondation Descroix-Vernier, la création d'un puits d'eau potable au Togo. Ce projet passé a jeté les bases de l'engagement futur de Bliryc Invest à soutenir des causes concrètes et vitales.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-accent mb-3">Philosophie de l'Allocation Future</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Lorsque la holding atteindra un niveau de performance suffisant, une partie des bénéfices réalisés sera réallouée vers des projets humanitaires ou éducatifs. Cette approche garantit que la source de financement (le capital) reste intacte et continue de croître, tandis que ses fruits (la performance) pourront être utilisés pour générer un impact social durable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AJOUT DU LIEN DE RETOUR À L'ACCUEIL -->
+        <div class="mt-16 pt-6 border-t border-gray-200 text-center">
+            <a href="index.html" class="inline-flex items-center text-accent font-semibold hover:underline">
+                <svg class="w-4 h-4 mr-2 transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                Retour à l'accueil
+            </a>
+        </div>
+    </main>
+
+    <!-- Pied de page (AJOUTÉ pour cohérence) -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:justify-start items-start gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center mb-2">
+                        <span class="ml-2 text-xl font-extrabold text-[#1a1a2e]">BLIRYC</span>
+                        <span class="text-xl font-light text-gray-500">.INVEST</span>
+                    </a>
+                    <p class="text-sm text-gray-500 ml-2">
+                        Holding de Cyril Blondel
+                    </p>
+                </div>
+                <!-- Section Liens de Navigation dans le Footer (SUPPRIMÉE) -->
+            </div>
+
+            <div class="mt-8 border-t border-gray-100 pt-6 text-center">
+                <p class="text-xs text-gray-400">
+                    &copy; 2025 BLIRYC INVEST. Tous droits r&eacute;serv&eacute;s. 
+                    <span class="mx-2 text-gray-300">|</span>
+                    <a href="mentions_legales.html" class="hover:text-accent font-medium">Mentions L&eacute;gales</a>
+                    <span class="mx-2 text-gray-300">|</span>
+                    Design cr&eacute;&eacute; par <a href="http://cyrilblondel.com" target="_blank" class="hover:text-accent font-medium">cyrilblondel.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
